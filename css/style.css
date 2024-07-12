@@ -41,7 +41,7 @@ html, body {
 
 .logo {
 	font-size: 40px;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .span-col {
@@ -59,6 +59,11 @@ nav a {
 	margin-left: 20px;
 	color: white;
 }
+
+nav a:hover {
+	color: #ffbf35;
+}
+
 
 /*****Main BANNER*****/
 .width-50 {
@@ -430,14 +435,32 @@ textarea {
 .experience-content {
 	display: flex;
 	align-items: center;
-	/* Căn giữa theo chiều dọc */
 }
 
 .project-img {
 	float: right;
 	width: 90px;
 	height: auto;
-	/* Đảm bảo hình ảnh giữ tỷ lệ gốc */
-	margin-left: 40% !important;
-	/* Tạo khoảng cách giữa văn bản và hình ảnh */
+	margin-right: 10%;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.banner-section {
+	position: relative;
+}
+
+#content {
+	white-space: nowrap;
+	overflow: hidden;
+	height: 2em;
+	/* Adjust this value based on the font size of your h2 */
+}
+
+#content h2 {
+	display: inline-block;
+	margin: 0;
+	white-space: nowrap;
 }
