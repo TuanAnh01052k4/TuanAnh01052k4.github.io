@@ -459,28 +459,30 @@ textarea {
 	/* Adjust this value based on the font size of your h2 */
 }
 
-.no-effects {
-    text-decoration: none; /* Xóa gạch chân */
-    color: inherit; /* Sử dụng màu của phần tử cha */
-    background: none; /* Xóa bất kỳ hình nền nào */
-    border: none; /* Xóa bất kỳ viền nào */
-    cursor: pointer; /* Đặt con trỏ chuột thành hình mũi tên */
-}
-
-/* Nếu muốn xóa tất cả các hiệu ứng khi hover */
-.no-effects:hover, 
-.no-effects:focus, 
-.no-effects:active, 
-.no-effects:visited {
-    text-decoration: none;
-    color: inherit;
-    background: none;
-    border: none;
-}
-
-
 #content h2 {
 	display: inline-block;
 	margin: 0;
 	white-space: nowrap;
+}
+
+.no-effects {
+	text-decoration: none;
+	/* Xóa gạch chân */
+	color: inherit;
+	/* Sử dụng màu của phần tử cha */
+	background: none;
+	/* Xóa bất kỳ hình nền nào */
+	cursor: pointer;
+	/* Đặt con trỏ chuột thành hình mũi tên */
+}
+
+/* Nếu muốn xóa tất cả các hiệu ứng khi hover */
+.no-effects:hover,
+.no-effects:focus,
+.no-effects:active,
+.no-effects:visited {
+	text-decoration: none;
+	color: inherit;
+	background: none;
+	border: none;
 }
