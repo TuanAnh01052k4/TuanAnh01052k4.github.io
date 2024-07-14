@@ -7,6 +7,71 @@
 	font-family: Roboto, sans-serif, arial;
 }
 
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px 0;
+	z-index: 1000;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.logo {
+	font-size: 24px;
+}
+
+.span-col {
+	color: #f1c40f;
+}
+
+/* Màu nền và chữ mặc định */
+header.default {
+	background-color: transparent;
+	color: #fff;
+}
+
+header.default nav a {
+	color: #fff;
+}
+
+header.default nav a:hover {
+	color: #ffbf35;
+}
+
+/* Màu nền và chữ khi cuộn */
+header.scrolled {
+	background-color: #fff;
+	color: #000;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header.scrolled nav a {
+	color: #000;
+}
+
+header.scrolled nav a:hover {
+	color: #ffbf35;
+}
+
+.content {
+	padding-top: 60px;
+	/* Đảm bảo nội dung không bị ẩn bởi header */
+	height: 2000px;
+	/* Tạo nội dung đủ dài để cuộn */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 html, body {
 	font-size: 14px;
 	font-weight: 400;
@@ -49,6 +114,7 @@ html, body {
 }
 
 nav {
+	padding-top: 15px;
 	float: right;
 }
 
@@ -485,4 +551,27 @@ textarea {
 	color: inherit;
 	background: none;
 	border: none;
+}
+
+#back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background: #f1c40f;
+	color: white;
+	cursor: pointer;
+	border-radius: 50%;
+	display: none;
+	/* Bắt đầu ẩn */
+	z-index: 1000;
+	text-decoration: none;
+	font-size: 24px;
+}
+
+#back-to-top:hover {
+	background: #e1b607;
 }

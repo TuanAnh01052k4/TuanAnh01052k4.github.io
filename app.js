@@ -56,3 +56,33 @@ function showElementsSequentially() {
 
 // Gọi hàm để bắt đầu hiệu ứng gõ chữ
 showElementsSequentially();
+
+// Hiển thị nút khi cuộn xuống
+window.onscroll = function () {
+  let backToTop = document.getElementById("back-to-top");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+};
+
+// Cuộn về đầu trang khi nhấn vào nút
+document.getElementById("back-to-top").onclick = function (event) {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+let lastScrollTop = 0;
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("header");
+  if (window.scrollY > 50) {
+    header.classList.remove("default");
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+    header.classList.add("default");
+  }
+});
